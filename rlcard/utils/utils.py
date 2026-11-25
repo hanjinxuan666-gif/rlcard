@@ -244,8 +244,8 @@ def plot_curve(csv_path, save_path, algorithm):
         ax.grid()
 
         save_dir = os.path.dirname(save_path)
-        if not os.path.exists(save_dir):
-            os.makedirs(save_dir)
+        if save_dir:
+            os.makedirs(save_dir, exist_ok=True)
 
         fig.savefig(save_path)
 
